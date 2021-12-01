@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OneCode</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mappers\**" />
+    <Compile Remove="Reports\**" />
+    <EmbeddedResource Remove="Mappers\**" />
+    <EmbeddedResource Remove="Reports\**" />
+    <None Remove="Mappers\**" />
+    <None Remove="Reports\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Orders\OrderManager.cs" />
+    <Compile Remove="Products\ProductManager.cs" />
+    <Compile Remove="Shops\ShopManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OneCode.Domain.Shared\OneCode.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Emailing" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.Identity.Domain" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.IdentityServer.Domain" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.IdentityServer" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.Domain" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.AuditLogging.Domain" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Domain" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

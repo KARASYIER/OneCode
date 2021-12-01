@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OneCode</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Orders\Dtos\Input\**" />
+    <EmbeddedResource Remove="Orders\Dtos\Input\**" />
+    <None Remove="Orders\Dtos\Input\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dtos\Result\ExecuteResultDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OneCode.Domain.Shared\OneCode.Domain.Shared.csproj" />
+    <ProjectReference Include="..\OneCode.ToolKit\OneCode.ToolKit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.1" />
+    <PackageReference Include="Volo.Abp.ObjectExtending" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.Account.Application.Contracts" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application.Contracts" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application.Contracts" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application.Contracts" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

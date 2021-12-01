@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OneCode</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AdminUser\**" />
+    <Compile Remove="ShopTag\**" />
+    <EmbeddedResource Remove="AdminUser\**" />
+    <EmbeddedResource Remove="ShopTag\**" />
+    <None Remove="AdminUser\**" />
+    <None Remove="ShopTag\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OneCode.Domain\OneCode.Domain.csproj" />
+    <ProjectReference Include="..\OneCode.Application.Contracts\OneCode.Application.Contracts.csproj" />
+    <ProjectReference Include="..\OneCode.ToolKit\OneCode.ToolKit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

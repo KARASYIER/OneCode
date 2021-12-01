@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OneCode</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20201223034635_initial.cs" />
+    <Compile Include="Migrations\20201223034635_initial.Designer.cs" />
+    <Compile Include="Migrations\20201224064928_renameCommision.cs" />
+    <Compile Include="Migrations\20201224064928_renameCommision.Designer.cs" />
+    <Compile Include="Migrations\20201228093542_RemoveShopCommisionRate.cs" />
+    <Compile Include="Migrations\20201228093542_RemoveShopCommisionRate.Designer.cs" />
+    <Compile Include="Migrations\20201228161649_UpdateForeignKey.cs" />
+    <Compile Include="Migrations\20201228161649_UpdateForeignKey.Designer.cs" />
+    <Compile Include="Migrations\20201229060520_RemveShopTag_Id.cs" />
+    <Compile Include="Migrations\20201229060520_RemveShopTag_Id.Designer.cs" />
+    <Compile Include="Migrations\20201229152923_Rename_DisplayOrder.cs" />
+    <Compile Include="Migrations\20201229152923_Rename_DisplayOrder.Designer.cs" />
+    <Compile Include="Migrations\20201230034950_Remove_ShopProduct_Id.cs" />
+    <Compile Include="Migrations\20201230034950_Remove_ShopProduct_Id.Designer.cs" />
+    <Compile Include="Migrations\20210104015558_AddTable_CommisionRecord.cs" />
+    <Compile Include="Migrations\20210104015558_AddTable_CommisionRecord.Designer.cs" />
+    <Compile Include="Migrations\20210104024404_Rename_CommisionRecord_SalerIdAndSalerName.cs" />
+    <Compile Include="Migrations\20210104024404_Rename_CommisionRecord_SalerIdAndSalerName.Designer.cs" />
+    <Compile Include="Migrations\20210105030823_AddColumn_CommisionType.cs" />
+    <Compile Include="Migrations\20210105030823_AddColumn_CommisionType.Designer.cs" />
+    <Compile Include="Migrations\20210105095621_AddColumn_CommisionValue.cs" />
+    <Compile Include="Migrations\20210105095621_AddColumn_CommisionValue.Designer.cs" />
+    <Compile Include="Migrations\20210105103324_AddColumn_FromCityToCity.cs" />
+    <Compile Include="Migrations\20210105103324_AddColumn_FromCityToCity.Designer.cs" />
+    <Compile Include="Migrations\20210105104000_RenameColumn_FromCityToCity.cs" />
+    <Compile Include="Migrations\20210105104000_RenameColumn_FromCityToCity.Designer.cs" />
+    <Compile Include="Migrations\20210106013358_AddColumn_ShopProduct_CommisionTypeAndValue.cs" />
+    <Compile Include="Migrations\20210106013358_AddColumn_ShopProduct_CommisionTypeAndValue.Designer.cs" />
+    <Compile Include="Migrations\20210106022954_AddColumn_OrderDetail_Count.cs" />
+    <Compile Include="Migrations\20210106022954_AddColumn_OrderDetail_Count.Designer.cs" />
+    <Compile Include="Migrations\20210107032340_AddColumn_RefundAmountAndMore.cs" />
+    <Compile Include="Migrations\20210107032340_AddColumn_RefundAmountAndMore.Designer.cs" />
+    <Compile Include="Migrations\20210107053152_AddColum_Draw.cs" />
+    <Compile Include="Migrations\20210107053152_AddColum_Draw.Designer.cs" />
+    <Compile Include="Migrations\20210107065537_EditColumn_Saler_Status.cs" />
+    <Compile Include="Migrations\20210107065537_EditColumn_Saler_Status.Designer.cs" />
+    <Compile Include="Migrations\20210107101301_AddColumn_Order_SalerName.cs" />
+    <Compile Include="Migrations\20210107101301_AddColumn_Order_SalerName.Designer.cs" />
+    <Compile Include="Migrations\20210111063526_AddColumn_SettlementAmount.cs" />
+    <Compile Include="Migrations\20210111063526_AddColumn_SettlementAmount.Designer.cs" />
+    <Compile Include="Migrations\20210112054038_AddColumn_QRCodeUrl.cs" />
+    <Compile Include="Migrations\20210112054038_AddColumn_QRCodeUrl.Designer.cs" />
+    <Compile Include="Migrations\20210112100646_Update_Order_SalerId_CanNull.cs" />
+    <Compile Include="Migrations\20210112100646_Update_Order_SalerId_CanNull.Designer.cs" />
+    <Compile Include="Migrations\20210112103435_AddCollumn_CommisionRecord_SalerName.cs" />
+    <Compile Include="Migrations\20210112103435_AddCollumn_CommisionRecord_SalerName.Designer.cs" />
+    <Compile Include="Migrations\20210113074314_AddColumn_Draw_OwnerId.cs" />
+    <Compile Include="Migrations\20210113074314_AddColumn_Draw_OwnerId.Designer.cs" />
+    <Compile Include="Migrations\OneCodeMigrationsDbContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OneCode.EntityFrameworkCore\OneCode.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8" />
+  </ItemGroup>
+
+</Project>
